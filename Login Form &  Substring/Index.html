@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Substring Check</title>
+</head>
+<body>
+    <h1>Login and Substring Check</h1>
+
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+
+    <p id="loginResult" style="color: red;"></p>
+
+    <h2>Substring Check</h2>
+    <p>Enter a string:</p>
+    <input type="text" id="inputString">
+    <p>Enter a substring to check:</p>
+    <input type="text" id="substringToCheck">
+    <button onclick="checkSubstring()">Check Substring</button>
+
+    <p id="substringResult" style="color: green;"></p>
+
+    <script>
+        // Function to validate the login form
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const loginResult = document.getElementById("loginResult");
+
+            // In a real application, you would perform server-side validation here
+            if (username === "user" && password === "password") {
+                loginResult.textContent = "Login successful.";
+                loginResult.style.color = "green";
+            } else {
+                loginResult.textContent = "Invalid username or password.";
+                loginResult.style.color = "red";
+            }
+        }
+
+        // Function to check if a substring is present
+        function checkSubstring() {
+            const inputString = document.getElementById("inputString").value;
+            const substringToCheck = document.getElementById("substringToCheck").value;
+            const substringResult = document.getElementById("substringResult");
+
+            if (inputString.includes(substringToCheck)) {
+                substringResult.textContent = `"${substringToCheck}" is present in the string.`;
+            } else {
+                substringResult.textContent = `"${substringToCheck}" is not present in the string.`;
+            }
+        }
+    </script>
+</body>
+</html>

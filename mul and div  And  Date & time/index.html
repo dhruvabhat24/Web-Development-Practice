@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations and Date & Time</title>
+</head>
+<body>
+    <h1>Number Operations and Date & Time</h1>
+
+    <h2>Calculate Multiplication and Division</h2>
+    <p>Enter the first number:</p>
+    <input type="number" id="number1">
+    <p>Enter the second number:</p>
+    <input type="number" id="number2">
+    <button onclick="calculateMultiplicationAndDivision()">Calculate</button>
+
+    <p id="result"></p>
+
+    <h2>Display Current Day and Time</h2>
+    <button onclick="displayCurrentDayAndTime()">Display</button>
+
+    <p id="dateTimeResult"></p>
+
+    <script>
+        // Function to calculate multiplication and division
+        function calculateMultiplicationAndDivision() {
+            const number1 = parseFloat(prompt("Enter the first number:"));
+            const number2 = parseFloat(prompt("Enter the second number:"));
+
+            if (!isNaN(number1) && !isNaN(number2)) {
+                const multiplication = number1 * number2;
+                const division = number1 / number2;
+                alert(`Multiplication: ${multiplication}\nDivision: ${division}`);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        // Function to display the current day and time
+        function displayCurrentDayAndTime() {
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const now = new Date();
+            const day = days[now.getDay()];
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const timePeriod = hours >= 12 ? "PM" : "AM";
+            const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+            const timeString = `${formattedHours} ${timePeriod} :${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+            alert(`Today is: ${day}\nCurrent time is: ${timeString}`);
+        }
+    </script>
+</body>
+</html>

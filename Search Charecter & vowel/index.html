@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+    <h1>String Operations</h1>
+
+    <h2>Search Characters by Position</h2>
+    <button onclick="searchCharacterByPosition()">Search Character by Position</button>
+
+    <h2>Find the Last Vowel</h2>
+    <button onclick="findLastVowel()">Find Last Vowel</button>
+
+    <script>
+        // Function to search characters by position
+        function searchCharacterByPosition() {
+            const inputString1 = prompt("Enter a string:");
+            
+            if (inputString1 !== null && inputString1 !== "") {
+                const position = parseInt(prompt("Enter the position (starting from 0):"));
+                
+                if (!isNaN(position) && position >= 0 && position < inputString1.length) {
+                    const character = inputString1.charAt(position);
+                    alert(`Character at position ${position}: ${character}`);
+                } else {
+                    alert("Invalid position or input.");
+                }
+            }
+        }
+
+        // Function to find the last vowel in a string
+        function findLastVowel() {
+            const inputString2 = prompt("Enter a string:");
+            
+            if (inputString2 !== null && inputString2 !== "") {
+                const vowels = "aeiouAEIOU";
+                let lastVowel = null;
+
+                for (let i = inputString2.length - 1; i >= 0; i--) {
+                    if (vowels.includes(inputString2.charAt(i))) {
+                        lastVowel = inputString2.charAt(i);
+                        break;
+                    }
+                }
+
+                if (lastVowel) {
+                    alert(`Last Vowel: ${lastVowel}`);
+                } else {
+                    alert("No vowels found in the string.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

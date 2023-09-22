@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Root and Current Time</title>
+</head>
+<body>
+    <h1>Square Root and Current Time</h1>
+
+    <h2>Calculate Square Root</h2>
+    <button onclick="calculateSquareRootPrompt()">Calculate Square Root</button>
+
+    <p id="sqrtResult"></p>
+
+    <h2>Display Current Month and Time</h2>
+    <button onclick="displayCurrentTime()">Display Current Time</button>
+
+    <p id="timeResult"></p>
+
+    <script>
+        // Function to calculate the square root of a number using a prompt
+        function calculateSquareRootPrompt() {
+            const inputNumber = prompt("Enter a number:");
+            const parsedNumber = parseFloat(inputNumber);
+
+            if (!isNaN(parsedNumber) && parsedNumber >= 0) {
+                const squareRoot = Math.sqrt(parsedNumber);
+                alert(`Square root of ${parsedNumber} is: ${squareRoot.toFixed(2)}`);
+            } else {
+                alert("Please enter a valid non-negative number.");
+            }
+        }
+
+        // Function to display the current month and time
+        function displayCurrentTime() {
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const now = new Date();
+            const month = months[now.getMonth()];
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const timePeriod = hours >= 12 ? "PM" : "AM";
+            const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+            const timeString = `${formattedHours} ${timePeriod}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+            alert(`It's ${month}\nCurrent time is: ${timeString}`);
+        }
+    </script>
+</body>
+</html>

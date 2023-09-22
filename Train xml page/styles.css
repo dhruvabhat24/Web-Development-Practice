@@ -1,0 +1,36 @@
+/* Styles for the train details */
+trainDetails {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+train {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for specific elements within each train element */
+trainNumber {
+    font-weight: bold;
+    color: #333;
+}
+
+trainName {
+    font-size: 18px;
+}
+
+arrivalTime, departureTime {
+    font-style: italic;
+    color: #777;
+}
+
+source, destination {
+    font-weight: bold;
+    color: #0066cc;
+}

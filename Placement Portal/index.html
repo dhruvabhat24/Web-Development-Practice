@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Placement Portal</h1>
+    </header>
+
+    <section id="student-recruiters">
+        <h2>Student Details</h2>
+        <form action="upload_student.php" method="post" enctype="multipart/form-data">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required><br>
+
+            <label for="studentResume">Upload Resume:</label>
+            <input type="file" id="studentResume" name="studentResume" accept=".pdf,.doc,.docx" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Recruiter Details</h2>
+        <ul>
+            <li>Recruiter Name: ABC Company</li>
+            <li>Contact: recruiter@abccompany.com</li>
+        </ul>
+    </section>
+
+    <section id="about-placement">
+        <h2>About Placement</h2>
+        <iframe src="about.html" width="800" height="600" frameborder="0"></iframe>
+    </section>
+</body>
+</html>

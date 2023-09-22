@@ -1,0 +1,43 @@
+/* CSS Styles for the Food Menu */
+foodMenu {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+meal {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+mealType {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+foodName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+price {
+    font-weight: bold;
+    color: #333;
+}
+
+description {
+    color: #777;
+}
+
+calories {
+    font-weight: bold;
+    color: #333;
+}

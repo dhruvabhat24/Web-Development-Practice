@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Number Operations</title>
+</head>
+<body>
+    <script>
+        // Function to add n numbers
+        function addNumbers() {
+            let n = parseInt(prompt("Enter the number of values you want to add:"));
+            let sum = 0;
+
+            for (let i = 0; i < n; i++) {
+                let value = parseFloat(prompt(`Enter value ${i + 1}:`));
+
+                // Check if the input is a valid number
+                if (!isNaN(value)) {
+                    sum += value;
+                }
+            }
+
+            alert(`The sum of ${n} numbers is: ${sum}`);
+        }
+
+        // Function to check if a number is positive or negative
+        function checkNumber() {
+            let number = parseFloat(prompt("Enter a number to check if it's positive or negative:"));
+
+            if (!isNaN(number)) {
+                if (number > 0) {
+                    alert(`${number} is a positive number.`);
+                } else if (number < 0) {
+                    alert(`${number} is a negative number.`);
+                } else {
+                    alert(`${number} is neither positive nor negative (zero).`);
+                }
+            } else {
+                alert("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        // Confirmation dialog
+        function showConfirmation() {
+            if (confirm("Do you want to perform number operations?")) {
+                addNumbers();
+                checkNumber();
+            } else {
+                alert("Operation canceled.");
+            }
+        }
+
+        // Call the function when the page loads
+        showConfirmation();
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+
+    <h2>Swap Two Numbers</h2>
+    <p>Enter the first number:</p>
+    <input type="number" id="firstNumber">
+    <p>Enter the second number:</p>
+    <input type="number" id="secondNumber">
+    <button onclick="swapNumbers()">Swap</button>
+
+    <h2>Check if a Number is Odd or Even</h2>
+    <p>Enter a number:</p>
+    <input type="number" id="oddEvenNumber">
+    <button onclick="checkOddEven()">Check</button>
+
+    <script>
+        // Function to swap two numbers
+        function swapNumbers() {
+            const firstNumber = parseFloat(prompt("Enter the first number:"));
+            const secondNumber = parseFloat(prompt("Enter the second number:"));
+
+            if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+                const temp = firstNumber;
+                document.getElementById("firstNumber").value = secondNumber;
+                document.getElementById("secondNumber").value = temp;
+                alert(`Numbers swapped successfully: First number is now ${secondNumber} and second number is now ${temp}`);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        // Function to check if a number is odd or even
+        function checkOddEven() {
+            const number = parseInt(prompt("Enter a number:"));
+
+            if (!isNaN(number)) {
+                const result = number % 2 === 0 ? "even" : "odd";
+                alert(`The number ${number} is ${result}.`);
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+    </script>
+</body>
+</html>

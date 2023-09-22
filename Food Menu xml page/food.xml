@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<foodMenu>
+    <meal>
+        <mealType>Breakfast</mealType>
+        <foodItem>
+            <foodName>Scrambled Eggs</foodName>
+            <price>$5.99</price>
+            <description>Fluffy eggs cooked to perfection.</description>
+            <calories>250</calories>
+        </foodItem>
+        <foodItem>
+            <foodName>Pancakes</foodName>
+            <price>$4.99</price>
+            <description>Fluffy pancakes served with maple syrup.</description>
+            <calories>350</calories>
+        </foodItem>
+    </meal>
+    <meal>
+        <mealType>Lunch</mealType>
+        <foodItem>
+            <foodName>Chicken Caesar Salad</foodName>
+            <price>$8.99</price>
+            <description>Fresh salad with grilled chicken and Caesar dressing.</description>
+            <calories>450</calories>
+        </foodItem>
+        <foodItem>
+            <foodName>Spaghetti Bolognese</foodName>
+            <price>$10.99</price>
+            <description>Classic Italian pasta with meat sauce.</description>
+            <calories>550</calories>
+        </foodItem>
+    </meal>
+    <meal>
+        <mealType>Evening Snacks</mealType>
+        <foodItem>
+            <foodName>Mozzarella Sticks</foodName>
+            <price>$6.99</price>
+            <description>Crispy mozzarella sticks served with marinara sauce.</description>
+            <calories>320</calories>
+        </foodItem>
+        <foodItem>
+            <foodName>Vegetable Spring Rolls</foodName>
+            <price>$5.99</price>
+            <description>Delicious fried spring rolls filled with vegetables.</description>
+            <calories>280</calories>
+        </foodItem>
+    </meal>
+</foodMenu>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and String Operations</title>
+</head>
+<body>
+    <h1>Form and String Operations</h1>
+
+    <h2>Enter Your Information</h2>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required><br>
+
+        <button type="button" onclick="validatePassword()">Submit</button>
+    </form>
+
+    <p id="passwordError" style="color: red;"></p>
+
+    <h2>Enter a String</h2>
+    <p>Enter a string:</p>
+    <input type="text" id="inputString">
+    <button onclick="returnLastCharacter()">Get Last Character</button>
+
+    <p id="lastCharacterResult"></p>
+
+    <script>
+        // Function to validate the password
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const passwordError = document.getElementById("passwordError");
+
+            if (password === confirmPassword) {
+                passwordError.textContent = "Password is valid.";
+                passwordError.style.color = "green";
+                alert("Password is valid.");
+            } else {
+                passwordError.textContent = "Passwords do not match.";
+                passwordError.style.color = "red";
+                alert("Passwords do not match. Please try again.");
+            }
+        }
+
+        // Function to return the last character of a string
+        function returnLastCharacter() {
+            const inputString = document.getElementById("inputString").value;
+            if (inputString.length > 0) {
+                const lastCharacter = inputString.charAt(inputString.length - 1);
+                document.getElementById("lastCharacterResult").textContent = `Last character of the string: ${lastCharacter}`;
+                alert(`Last character of the string: ${lastCharacter}`);
+            } else {
+                document.getElementById("lastCharacterResult").textContent = "Please enter a string.";
+                alert("Please enter a string.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<trainDetails>
+    <train>
+        <trainNumber>12345</trainNumber>
+        <trainName>Coastal Express</trainName>
+        <arrivalTime>08:00 AM</arrivalTime>
+        <departureTime>08:30 AM</departureTime>
+        <source>Mangalore</source>
+        <destination>Karwar</destination>
+    </train>
+    <train>
+        <trainNumber>56789</trainNumber>
+        <trainName>Karavali Express</trainName>
+        <arrivalTime>09:15 AM</arrivalTime>
+        <departureTime>09:45 AM</departureTime>
+        <source>Mangalore</source>
+        <destination>Karwar</destination>
+    </train>
+    <train>
+        <trainNumber>98765</trainNumber>
+        <trainName>West Coast Express</trainName>
+        <arrivalTime>11:00 AM</arrivalTime>
+        <departureTime>11:30 AM</departureTime>
+        <source>Mangalore</source>
+        <destination>Karwar</destination>
+    </train>
+</trainDetails>

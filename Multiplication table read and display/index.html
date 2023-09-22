@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+
+    <h2>Multiplication Table</h2>
+    <button onclick="computeMultiplicationTablePrompt()">Compute Multiplication Table</button>
+
+    <div id="tableResult"></div>
+
+    <h2>Largest Number</h2>
+    <button onclick="findLargestNumberPrompt()">Find Largest Number</button>
+
+    <p id="largestResult"></p>
+
+    <script>
+        // Function to compute the multiplication table using a prompt
+        function computeMultiplicationTablePrompt() {
+            const numberForTable = prompt("Enter a number to compute its multiplication table:");
+            const parsedNumber = parseInt(numberForTable);
+
+            if (!isNaN(parsedNumber)) {
+                let table = `<p>Multiplication Table for ${parsedNumber}:</p>`;
+                for (let i = 1; i <= 10; i++) {
+                    table += `${parsedNumber} x ${i} = ${parsedNumber * i}<br>`;
+                }
+                document.getElementById("tableResult").innerHTML = table;
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+
+        // Function to find the largest number using a prompt
+        function findLargestNumberPrompt() {
+            const numbersForLargest = prompt("Enter a series of numbers separated by commas:");
+            const numbersArray = numbersForLargest.split(",").map(Number);
+
+            if (numbersArray.every(isValidNumber)) {
+                const largestNumber = Math.max(...numbersArray);
+                alert(`The largest number is: ${largestNumber}`);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        // Function to check if a value is a valid number
+        function isValidNumber(value) {
+            return !isNaN(value);
+        }
+    </script>
+</body>
+</html>
